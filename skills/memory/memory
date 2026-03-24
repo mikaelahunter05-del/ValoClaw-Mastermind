@@ -1,0 +1,306 @@
+#!/usr/bin/env node
+/**
+ * Memory Skill - Complete memory system
+ * Auto-capture, keyword search, context recovery
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const WORKSPACE = process.env.OPENCLAW_WORKSPACE || '/data/.openclaw/workspace';
+const MEMORY_FILE = path.join(WORKSPACE, 'memory', 'memories.jsonl');
+
+const VALID_CATEGORIES = ['fact', 'decision', 'contact', 'idea', 'task', 'revenue', 'personal', 'system'];
+
+function ensureMemoryFile() {
+  const dir = path.dirname(MEMORY_FILE);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  if (!fs.existsSync(MEMORY_FILE)) {
+    fs.writeFileSync(MEMORY_FILE, '');
+  }
+}
+
+function loadMemories() {
+  ensureMemoryFile();
+  try {
+    const content = fs.readFileSync(MEMORY_FILE, 'utf-8');
+    return content
+      .split('\n')
+      .filter(line => line.trim())
+      .map(line => {
+        try {
+          return JSON.parse(line);
+        } catch {
+          return null;
+        }
+      })
+      .filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
+function saveMemory(entry) {
+  ensureMemoryFile();
+  const line = JSON.stringify(entry) + '\n';
+  fs.appendFileSync(MEMORY_FILE, line);
+  return entry;
+}
+
+function remember(text, options = {}) {
+  const category = options.category || 'fact';
+  if (!VALID_CATEGORIES.includes(category)) {
+    console.error(`Error: Invalid category "${category}". Valid: ${VALID_CATEGORIES.join(', ')}`);
+    process.exit(1);
+  }
+
+  const entry = {
+    id: `mem_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    timestamp: new Date().toISOString(),
+    category,
+    text: text.trim(),
+    tags: options.tags || [],
+    source: options.source || 'manual',
+  };
+
+  saveMemory(entry);
+
+  console.log('✅ Memory saved:');
+  console.log(`   Category: ${category}`);
+  console.log(`   Text: ${text}`);
+  console.log(`   ID: ${entry.id}`);
+}
+
+function search(query, options = {}) {
+  const memories = loadMemories();
+  const q = query.toLowerCase();
+  const category = options.category;
+
+  const results = memories.filter(m => {
+    const matchesQuery = m.text.toLowerCase().includes(q) ||
+                        m.tags.some(t => t.toLowerCase().includes(q));
+    const matchesCategory = !category || m.category === category;
+    return matchesQuery && matchesCategory;
+  });
+
+  // Sort by recency
+  results.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+  const limit = options.limit || 20;
+  const display = results.slice(0, limit);
+
+  console.log(`🔍 Search: "${query}"`);
+  console.log(`   Found ${results.length} memories${category ? ` in category "${category}"` : ''}`);
+  console.log();
+
+  if (display.length === 0) {
+    console.log('No memories found.');
+    return;
+  }
+
+  display.forEach((m, i) => {
+    const date = new Date(m.timestamp).toLocaleDateString();
+    console.log(`${i + 1}. [${m.category.toUpperCase()}] ${m.text}`);
+    console.log(`   📅 ${date}${m.tags.length ? ' | 🏷️ ' + m.tags.join(', ') : ''}`);
+    console.log();
+  });
+
+  if (results.length > limit) {
+    console.log(`... and ${results.length - limit} more (use --limit to show more)`);
+  }
+}
+
+function list(options = {}) {
+  const memories = loadMemories();
+  const category = options.category;
+
+  let display = memories;
+  if (category) {
+    display = memories.filter(m => m.category === category);
+  }
+
+  // Sort by recency
+  display.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+  const limit = options.limit || 10;
+  const page = display.slice(0, limit);
+
+  console.log(`📋 Recent Memories${category ? ` (${category})` : ''}`);
+  console.log(`   Total stored: ${memories.length}`);
+  console.log();
+
+  if (page.length === 0) {
+    console.log('No memories found.');
+    return;
+  }
+
+  page.forEach((m, i) => {
+    const date = new Date(m.timestamp).toLocaleString();
+    console.log(`${i + 1}. [${m.category.toUpperCase()}] ${m.text}`);
+    console.log(`   📅 ${date}${m.tags.length ? ' | 🏷️ ' + m.tags.join(', ') : ''}`);
+    console.log();
+  });
+}
+
+function recover() {
+  const memories = loadMemories();
+
+  // Sort by recency
+  memories.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+  console.log('🧠 Memory Recovery');
+  console.log('═══════════════════════════════════════════════════');
+  console.log(`Total memories: ${memories.length}`);
+  console.log();
+
+  // Group by category
+  const byCategory = {};
+  memories.forEach(m => {
+    byCategory[m.category] = byCategory[m.category] || [];
+    byCategory[m.category].push(m);
+  });
+
+  // Show recent from each category
+  const categories = ['revenue', 'decision', 'contact', 'idea', 'task', 'fact'];
+
+  for (const cat of categories) {
+    if (byCategory[cat] && byCategory[cat].length > 0) {
+      console.log(`\n📂 ${cat.toUpperCase()} (${byCategory[cat].length})`);
+      byCategory[cat].slice(0, 3).forEach(m => {
+        const date = new Date(m.timestamp).toLocaleDateString();
+        console.log(`   • ${m.text} (${date})`);
+      });
+      if (byCategory[cat].length > 3) {
+        console.log(`   ... and ${byCategory[cat].length - 3} more`);
+      }
+    }
+  }
+
+  console.log('\n═══════════════════════════════════════════════════');
+  console.log('✅ Context recovered from memory store');
+}
+
+function stats() {
+  const memories = loadMemories();
+
+  const byCategory = {};
+  memories.forEach(m => {
+    byCategory[m.category] = (byCategory[m.category] || 0) + 1;
+  });
+
+  const today = new Date().toDateString();
+  const todayCount = memories.filter(m => new Date(m.timestamp).toDateString() === today).length;
+
+  console.log('📊 Memory Statistics');
+  console.log('═══════════════════════════════════════════════════');
+  console.log(`Total memories: ${memories.length}`);
+  console.log(`Added today: ${todayCount}`);
+  console.log();
+  console.log('By category:');
+  Object.entries(byCategory)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([cat, count]) => {
+      console.log(`   ${cat}: ${count}`);
+    });
+  console.log('═══════════════════════════════════════════════════');
+}
+
+// CLI entry
+function main() {
+  const args = process.argv.slice(2);
+
+  if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
+    console.log(`
+Usage: memory <command> [options]
+
+Commands:
+  remember <text>     Store a new memory
+  search <query>      Search memories by keyword
+  list                List recent memories
+  recover             Recover context from all memories
+  stats               Show memory statistics
+
+Options:
+  --category <cat>    Category: fact, decision, contact, idea, task, revenue, personal
+  --tags <t1,t2>      Comma-separated tags
+  --limit <n>         Limit results (default: 10 for list, 20 for search)
+  --help              Show this help
+
+Examples:
+  memory remember "Kyle prefers morning meetings" --category personal
+  memory remember "SetupClaw charges $500" --category revenue --tags competitor,pricing
+  memory search "meeting"
+  memory search "competitor" --category revenue
+  memory list --limit 20
+  memory recover
+`);
+    process.exit(0);
+  }
+
+  const command = args[0];
+  const options = {};
+
+  // Parse flags first
+  for (let i = 1; i < args.length; i++) {
+    if (args[i] === '--category' && args[i + 1]) {
+      options.category = args[i + 1];
+      i++;
+    } else if (args[i] === '--tags' && args[i + 1]) {
+      options.tags = args[i + 1].split(',').map(t => t.trim());
+      i++;
+    } else if (args[i] === '--limit' && args[i + 1]) {
+      options.limit = parseInt(args[i + 1], 10);
+      i++;
+    }
+  }
+
+  // Extract text (everything that's not a flag or flag value)
+  const textParts = [];
+  for (let i = 1; i < args.length; i++) {
+    if (args[i].startsWith('--')) {
+      i++; // skip the flag value too
+    } else if (!options.text) {
+      textParts.push(args[i]);
+    }
+  }
+  options.text = textParts.join(' ').trim();
+
+  switch (command) {
+    case 'remember':
+      if (!options.text) {
+        console.error('Error: No memory text provided');
+        process.exit(1);
+      }
+      remember(options.text, options);
+      break;
+
+    case 'search':
+      if (!options.text) {
+        console.error('Error: No search query provided');
+        process.exit(1);
+      }
+      search(options.text, options);
+      break;
+
+    case 'list':
+      list(options);
+      break;
+
+    case 'recover':
+      recover();
+      break;
+
+    case 'stats':
+      stats();
+      break;
+
+    default:
+      console.error(`Error: Unknown command "${command}"`);
+      console.error('Run with --help for usage');
+      process.exit(1);
+  }
+}
+
+main();

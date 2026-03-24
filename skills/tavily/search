@@ -1,0 +1,116 @@
+#!/usr/bin/env node
+/**
+ * Tavily Web Search - OpenClaw Skill
+ * Uses Tavily API for AI-powered web search
+ */
+
+const API_BASE = 'https://api.tavily.com';
+
+async function search(query, options = {}) {
+  const apiKey = process.env.TAVILY_API_KEY;
+  if (!apiKey) {
+    console.error('Error: TAVILY_API_KEY environment variable not set');
+    process.exit(1);
+  }
+
+  const payload = {
+    api_key: apiKey,
+    query: query,
+    search_depth: options.depth || 'basic',
+    max_results: Math.min(Math.max(options.maxResults || 5, 1), 20),
+    include_answer: options.includeAnswer !== false,
+    include_raw_content: options.rawContent === true,
+  };
+
+  try {
+    const response = await fetch(`${API_BASE}/search`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      throw new Error(`Tavily API error: ${response.status} - ${error}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.error(`Search failed: ${err.message}`);
+    process.exit(1);
+  }
+}
+
+function formatResults(data) {
+  if (data.answer) {
+    console.log('\n📋 Answer:\n' + data.answer + '\n');
+  }
+
+  if (data.results && data.results.length > 0) {
+    console.log('🔗 Sources:');
+    data.results.forEach((r, i) => {
+      console.log(`\n${i + 1}. ${r.title}`);
+      console.log(`   ${r.url}`);
+      if (r.content) {
+        const snippet = r.content.substring(0, 200).replace(/\s+/g, ' ').trim();
+        console.log(`   ${snippet}...`);
+      }
+      if (r.score) {
+        console.log(`   Relevance: ${(r.score * 100).toFixed(1)}%`);
+      }
+    });
+  }
+
+  console.log(`\n⏱️  Response time: ${data.response_time?.toFixed(2) || 'N/A'}s`);
+}
+
+// CLI entry
+async function main() {
+  const args = process.argv.slice(2);
+
+  if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
+    console.log(`
+Usage: search [options] <query>
+
+Options:
+  --depth basic|comprehensive   Search depth (default: basic)
+  --max-results N               Max results 1-20 (default: 5)
+  --raw-content                 Include full page content
+  --help                        Show this help
+
+Examples:
+  search "OpenClaw AI agents"
+  search --depth comprehensive --max-results 10 "competitor analysis"
+`);
+    process.exit(0);
+  }
+
+  const options = { includeAnswer: true };
+  const queryParts = [];
+
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === '--depth' && args[i + 1]) {
+      options.depth = args[i + 1];
+      i++;
+    } else if (args[i] === '--max-results' && args[i + 1]) {
+      options.maxResults = parseInt(args[i + 1], 10);
+      i++;
+    } else if (args[i] === '--raw-content') {
+      options.rawContent = true;
+    } else {
+      queryParts.push(args[i]);
+    }
+  }
+
+  const query = queryParts.join(' ').trim();
+  if (!query) {
+    console.error('Error: No search query provided');
+    process.exit(1);
+  }
+
+  const data = await search(query, options);
+  formatResults(data);
+}
+
+main();

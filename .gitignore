@@ -1,0 +1,31 @@
+# ValoBot Brain Backup - Git Ignore
+
+# Secrets
+.env.local
+.env
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Private data
+vault/
+.openclaw/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if any)
+node_modules/
+
+# Logs
+*.log
+logs/

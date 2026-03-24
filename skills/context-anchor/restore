@@ -1,0 +1,123 @@
+#!/usr/bin/env node
+/**
+ * Context Anchor - Restores session context from memory files
+ * Scans MEMORY.md and recent daily logs
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const WORKSPACE = process.env.OPENCLAW_WORKSPACE || '/data/.openclaw/workspace';
+const MEMORY_DIR = path.join(WORKSPACE, 'memory');
+const MEMORY_FILE = path.join(WORKSPACE, 'MEMORY.md');
+
+function readFileSafe(filePath) {
+  try {
+    return fs.readFileSync(filePath, 'utf-8');
+  } catch (err) {
+    return null;
+  }
+}
+
+function getRecentDailyLogs(count = 3) {
+  try {
+    if (!fs.existsSync(MEMORY_DIR)) {
+      return [];
+    }
+
+    const files = fs
+      .readdirSync(MEMORY_DIR)
+      .filter(f => f.match(/^\d{4}-\d{2}-\d{2}\.md$/))
+      .sort()
+      .reverse()
+      .slice(0, count);
+
+    return files.map(f => ({
+      date: f.replace('.md', ''),
+      path: path.join(MEMORY_DIR, f),
+      content: readFileSafe(path.join(MEMORY_DIR, f)),
+    }));
+  } catch (err) {
+    console.error(`Error scanning memory directory: ${err.message}`);
+    return [];
+  }
+}
+
+function restoreContext() {
+  console.log('⚓ Context Anchor: Restoring session context...\n');
+
+  // Load permanent memory
+  const memory = readFileSafe(MEMORY_FILE);
+  if (memory) {
+    console.log('═══════════════════════════════════════════════════');
+    console.log('📋 PERMANENT MEMORY (MEMORY.md)');
+    console.log('═══════════════════════════════════════════════════');
+    console.log(memory);
+    console.log('\n');
+  } else {
+    console.warn('⚠️  MEMORY.md not found\n');
+  }
+
+  // Load recent daily logs
+  const logs = getRecentDailyLogs(3);
+  if (logs.length > 0) {
+    console.log('═══════════════════════════════════════════════════');
+    console.log(`📅 RECENT DAILY LOGS (${logs.length} files)`);
+    console.log('═══════════════════════════════════════════════════');
+
+    for (const log of logs) {
+      console.log(`\n--- ${log.date} ---\n`);
+      if (log.content) {
+        console.log(log.content);
+      } else {
+        console.log('[Unable to read file]');
+      }
+    }
+  } else {
+    console.log('ℹ️  No daily memory logs found yet');
+  }
+
+  console.log('\n═══════════════════════════════════════════════════');
+  console.log('✅ Context restoration complete');
+  console.log('═══════════════════════════════════════════════════');
+
+  return { memory, logs };
+}
+
+// CLI entry
+function main() {
+  const args = process.argv.slice(2);
+
+  if (args.includes('--help') || args.includes('-h')) {
+    console.log(`
+Usage: restore [options]
+
+Options:
+  --logs N      Number of daily logs to load (default: 3)
+  --json        Output as JSON instead of formatted text
+  --help        Show this help
+
+Examples:
+  restore
+  restore --logs 5
+  restore --json
+`);
+    process.exit(0);
+  }
+
+  const jsonOutput = args.includes('--json');
+  const logsArg = args.findIndex(a => a === '--logs');
+  const logCount = logsArg >= 0 ? parseInt(args[logsArg + 1], 10) || 3 : 3;
+
+  if (jsonOutput) {
+    const result = {
+      memory: readFileSafe(MEMORY_FILE),
+      logs: getRecentDailyLogs(logCount),
+    };
+    console.log(JSON.stringify(result, null, 2));
+  } else {
+    restoreContext();
+  }
+}
+
+main();
