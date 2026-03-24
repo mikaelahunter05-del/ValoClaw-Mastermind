@@ -45,6 +45,20 @@ When triggered:
 
 ---
 
+## Nightly Brain Backup to GitHub (2:00 AM ICT)
+
+**Job ID:** `3ca0d7b8-357c-4359-a41e-959562760f3c`
+
+**Purpose:** Push entire brain to GitHub for off-site backup.
+
+When triggered:
+1. Add all changes: git add .
+2. Commit with timestamp: git commit -m "Brain backup [date]"
+3. Push to GitHub: git push origin main
+4. Confirm on Telegram: "🧠 Brain backed up to GitHub — [date]"
+
+---
+
 ## Cron Jobs Summary
 
 | Job | Schedule | Next Run |
@@ -52,5 +66,6 @@ When triggered:
 | Morning Brief | 7:00 AM ICT | Tomorrow |
 | End of Day | 6:00 PM ICT | Today |
 | Daily Memory Backup | 11:30 PM ICT | Tonight |
+| Nightly GitHub Backup | 2:00 AM ICT | Tonight |
 
 All jobs are enabled and active.
