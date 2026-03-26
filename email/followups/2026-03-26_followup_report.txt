@@ -1,0 +1,60 @@
+📧 EMAIL FOLLOW-UP REPORT — March 26, 2026
+
+STATUS: CHECK INCOMPLETE — Authentication Required
+
+---
+
+ISSUE:
+GOG email scan failed due to keyring password requirement. The command:
+  gog gmail search 'in:sent newer_than:7d' --max 20 --account kswift100686@gmail.com
+
+Returned error:
+  "no TTY available for keyring file backend password prompt; set GOG_KEYRING_PASSWORD"
+
+This means the Google authentication token is encrypted and requires a password to decrypt.
+
+---
+
+WHAT THIS MEANS:
+• Cannot automatically check sent emails for replies
+• Cannot identify emails sent 3+ days ago with no reply
+• Cannot draft follow-up messages
+
+---
+
+RESOLUTION OPTIONS:
+
+OPTION 1: Set Keyring Password (One-time setup)
+  export GOG_KEYRING_PASSWORD="your-password"
+  Then re-run the email check
+
+OPTION 2: Re-authenticate GOG
+  gog auth add kswift100686@gmail.com --services gmail
+  (This will refresh the token)
+
+OPTION 3: Manual Check
+  Kyle checks Gmail sent folder manually for emails sent 3+ days ago with no reply
+
+OPTION 4: Use Alternative Method
+  Configure GOG with non-encrypted token storage, OR
+  Use Gmail API directly with service account
+
+---
+
+RECOMMENDED ACTION:
+Kyle should either:
+1. Provide the GOG_KEYRING_PASSWORD for automation, OR
+2. Re-authenticate GOG interactively, OR
+3. Switch to a service account authentication method
+
+---
+
+MANUAL FOLLOW-UP CHECKLIST (If handling manually today):
+□ Check Gmail Sent folder
+□ Look for emails sent March 23 or earlier (3+ days ago)
+□ Check if any have NO reply
+□ Draft gentle follow-ups referencing original email
+□ Keep under 100 words, one question/CTA
+
+---
+Report generated: March 26, 2026 10:09 AM ICT
