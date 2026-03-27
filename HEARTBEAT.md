@@ -53,18 +53,22 @@ Pain point focus: [Which of the 8 pains to emphasize]
 
 **Job ID:** `1fe7d538-124d-4db1-b8b9-b379fec68fe0`
 
-**Purpose:** Execute Scout skill to find high-ticket business and executive coaches daily.
+**Purpose:** Run Scout skill in MODE 4: DAILY SCAN — focused on finding coaches talking about their pain points.
 
 When triggered:
-1. Search LinkedIn for coach pain phrases (session admin, follow-ups, overwhelm, scaling)
-2. Search X/Twitter for coach-specific frustration posts
-3. Search Reddit r/Coaching and r/Entrepreneur for operational pain
-4. Research each prospect: profile, practice, niche, pain score (1-5 × 6 categories = /30), timing (IMMEDIATE/WEEK/MONTH/SOMEDAY)
-5. Craft public reply and warm DM draft per Scout rules
-6. Categorize as Hot/Warm/Cold
-7. Generate full Scout Report with summary, hot prospects (detailed), warm (condensed), cold list
-8. Send Scout Report to Telegram for Kyle's approval
-9. Save report to workspace/scout/reports/YYYY-MM-DD_scout_report.txt
+1. Search LinkedIn for coaches posting about pain points (session admin, follow-ups, overwhelm, scaling, VA hiring, burnout)
+2. Search X/Twitter for coach-specific frustration posts using hashtags (#businesscoach, #executivecoaching, #coachingbusiness)
+3. Search Reddit r/Coaching, r/lifecoaching, r/entrepreneur for operational pain
+4. Identify coaches actively expressing pain TODAY (not old posts)
+5. For each coach found: name, platform, what they posted, pain point identified, how ValoClaw solves it
+6. Draft helpful reply (not pitchy) and empathetic DM (one question)
+7. Categorize prospects as Hot/Warm/Cold based on pain intensity and timing
+8. Generate Scout Report with summary, hot prospects (full research), warm prospects (condensed), cold watch list
+9. Include trending coaching conversations and one market insight
+10. Send Scout Report to Telegram for Kyle's approval
+11. Save report to workspace/scout/reports/YYYY-MM-DD_scout_report.txt
+
+**Focus:** Find coaches in pain RIGHT NOW — prioritize posts from last 24-48 hours expressing overwhelm, admin burden, or scaling frustration.
 
 ---
 
