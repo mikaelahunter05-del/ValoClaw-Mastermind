@@ -249,24 +249,69 @@ RECOMMENDATIONS:
 
 **Job ID:** `1b4e67e9-389a-4f3c-bd6b-a1e9b8aae439`
 
-**Purpose:** Weekly competitor monitoring for coaching platforms and AI practice management.
+**Purpose:** Weekly competitor monitoring for coaching platforms and OpenClaw builders.
+
+**Monitor These Competitors:**
+- **Paperbell** — session management platform
+- **CoachAccountable** — coaching platform
+- **Delenta** — coaching business platform
+- **SetupClaw** — OpenClaw builder
+- **HayOn AI** — OpenClaw builder
+- **Any new AI tools targeting coaches**
 
 When triggered:
-1. Search web for Paperbell updates (pricing, features, marketing, launches)
-2. Search web for CoachAccountable updates (pricing, features, marketing, launches)
-3. Search web for Delenta updates (pricing, features, marketing, launches)
-4. Search web for other AI coaching tools (replacement vs support angle)
-5. Analyze pricing changes, feature launches, positioning shifts
-6. Generate Competitor Intelligence Report with:
+1. Search web for each competitor's latest updates (past 7 days)
+2. Monitor for: new features, pricing changes, product launches, positioning shifts
+3. Search for coach reviews, complaints, and discussions about these tools
+4. Analyze what coaches are saying — pain points, praise, feature requests
+5. Identify gaps in their offerings that ValoClaw fills
+6. Flag any new AI coaching tools entering the market
+7. Generate Competitor Intelligence Report with:
    - Executive Summary
-   - Paperbell updates (pricing, features, positioning)
-   - CoachAccountable updates (pricing, features, positioning)
-   - Delenta updates (pricing, features, positioning)
-   - Other AI coaching tool updates
+   - Per-competitor updates (what launched, pricing changes, positioning)
+   - Coach sentiment: what users are saying
+   - Gaps analysis: what they don't do that we do
+   - New entrants: any fresh competitors this week
    - Threats & Opportunities analysis
    - Recommended ValoClaw responses
-7. Send report to Telegram
-8. Save report to workspace/competitor/reports/YYYY-MM-DD_competitor_report.txt
+8. Send report to Telegram
+9. Save report to workspace/competitor/reports/YYYY-MM-DD_competitor_report.txt
+
+OUTPUT FORMAT:
+👁️ COMPETITOR INTEL — [Date]
+
+EXECUTIVE SUMMARY:
+[2-3 sentences on biggest changes]
+
+PAPERBELL:
+- Updates: [what launched/changed]
+- Pricing: [any changes]
+- Coach sentiment: [what users are saying]
+
+COACHACCOUNTABLE:
+- Updates: [what launched/changed]
+- Pricing: [any changes]
+- Coach sentiment: [what users are saying]
+
+DELENTA:
+- Updates: [what launched/changed]
+- Pricing: [any changes]
+- Coach sentiment: [what users are saying]
+
+OPENCLAW BUILDERS:
+- SetupClaw: [updates, positioning]
+- HayOn AI: [updates, positioning]
+
+NEW ENTRANTS:
+[Any new AI coaching tools this week]
+
+GAPS ANALYSIS:
+[What competitors don't do that ValoClaw does]
+
+THREAT LEVEL: 🟢 Low / 🟡 Medium / 🔴 High
+
+RECOMMENDED RESPONSE:
+[How ValoClaw should position against them]
 
 ---
 
