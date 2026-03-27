@@ -16,7 +16,7 @@ This file defines automated tasks that run on schedule via cron jobs.
 
 1. Check Google Calendar for today's meetings
 2. Scan Gmail for urgent emails from VIP contacts (Michelle Hilling, Kenji Watabe)
-3. Search web for top 3 AI/OpenClaw news stories (past 24h)
+3. Search web for top 3 AI/coaching industry news stories (past 24h)
 4. Send formatted brief to Telegram with schedule, priority emails, news, and focus suggestions
 
 ---
@@ -25,13 +25,13 @@ This file defines automated tasks that run on schedule via cron jobs.
 
 **Job ID:** `1fe7d538-124d-4db1-b8b9-b379fec68fe0`
 
-**Purpose:** Execute Scout skill to find ValoClaw leads daily.
+**Purpose:** Execute Scout skill to find high-ticket business and executive coaches daily.
 
 When triggered:
-1. Search X/Twitter for founder pain phrases (drowning in emails, founder burnout, need to automate, I'm the bottleneck, etc.)
-2. Search Reddit r/entrepreneur and r/SaaS for operational overwhelm posts
-3. Search LinkedIn for scaling/founder productivity struggles
-4. Research each prospect: profile, company, pain score (1-5 × 6 categories = /30), timing (IMMEDIATE/WEEK/MONTH/SOMEDAY)
+1. Search LinkedIn for coach pain phrases (session admin, follow-ups, overwhelm, scaling)
+2. Search X/Twitter for coach-specific frustration posts
+3. Search Reddit r/Coaching and r/Entrepreneur for operational pain
+4. Research each prospect: profile, practice, niche, pain score (1-5 × 6 categories = /30), timing (IMMEDIATE/WEEK/MONTH/SOMEDAY)
 5. Craft public reply and warm DM draft per Scout rules
 6. Categorize as Hot/Warm/Cold
 7. Generate full Scout Report with summary, hot prospects (detailed), warm (condensed), cold list
@@ -64,15 +64,33 @@ When triggered:
 
 ---
 
+## Forge Weekly Content Plan (Monday 8:00 AM ICT)
+
+**Job ID:** `pending-creation`
+
+**Purpose:** Generate weekly content calendar for coach-focused marketing.
+
+When triggered:
+1. Review past week's content performance
+2. Identify highest-engagement coach pain points
+3. Create 7-day content calendar targeting specific pain points (session admin, follow-ups, content, pipeline, VA dependency, burnout, proposals)
+4. Draft hooks for each post (LinkedIn primary, X secondary)
+5. Generate video scripts for top 3 pieces
+6. Ensure 40/25/20/10/5 content mix ratio
+7. Send weekly plan to Telegram for approval
+8. Save to workspace/content/weekly/YYYY-MM-DD_content_plan.txt
+
+---
+
 ## Pulse Daily Experiment Log (11:00 PM ICT)
 
 **Job ID:** `b4c98b13-24e5-432f-8897-714a81f6ac49`
 
-**Purpose:** Execute Pulse skill — track $200 experiment metrics and trajectory.
+**Purpose:** Execute Pulse skill — track $200 experiment metrics and trajectory for coaching vertical.
 
 When triggered:
 1. Budget tracking: $200 experiment — spent today, remaining, burn rate, days until depletion
-2. Revenue tracking: gross, deal count, average deal size, revenue per day, pipeline (inquiries→calls→proposals→closed)
+2. Revenue tracking: gross, deal count (ValoCore/ValoPrime/ValoGuard), average deal size, revenue per day, pipeline (inquiries→calls→proposals→closed)
 3. Content metrics: posts per platform, engagement by platform, best/worst performing posts with WHY analysis, follower growth, DMs received (total/qualified/converted)
 4. Lead stats: Scout prospects found (hot/warm/cold), outreach sent vs replies, reply rate by platform, prospect→DM→call→client conversion
 5. Cron health: job execution rate, failures and why, API cost per day, system health
@@ -83,7 +101,7 @@ OUTPUT FORMAT:
 💰 Budget: $[remaining]/$200 | Spent today: $[X]
 💵 Revenue: $[total] | Pipeline: [X] inquiries → [X] calls → [X] closed
 📱 Content: [X] posts | Best: [which] | DMs: [X]
-🎯 Leads: Scout found [X] | Hot: [X] | Outreach: [X] sent, [X] replies
+🎯 Leads: Scout found [X] coaches | Hot: [X] | Outreach: [X] sent, [X] replies
 🔄 Crons: [X]/[X] fired | API: $[today]
 📈 Target: $10K | Current: $[X] | Need $[X]/day | Status: 🟢/🟡/🔴
 💡 Insight: [one data observation]
@@ -168,22 +186,24 @@ RECOMMENDATIONS:
 
 **Job ID:** `1b4e67e9-389a-4f3c-bd6b-a1e9b8aae439`
 
-**Purpose:** Weekly competitor monitoring for SetupClaw, HayOn AI, and OpenClaw ecosystem.
+**Purpose:** Weekly competitor monitoring for coaching platforms and AI practice management.
 
 When triggered:
-1. Search web for SetupClaw updates (pricing, features, marketing, launches)
-2. Search web for HayOn AI updates (pricing, features, marketing, launches)
-3. Search web for OpenClaw ecosystem updates (new integrations, community growth, platform changes)
-4. Analyze pricing changes, feature launches, positioning shifts
-5. Generate Competitor Intelligence Report with:
+1. Search web for Paperbell updates (pricing, features, marketing, launches)
+2. Search web for CoachAccountable updates (pricing, features, marketing, launches)
+3. Search web for Delenta updates (pricing, features, marketing, launches)
+4. Search web for other AI coaching tools (replacement vs support angle)
+5. Analyze pricing changes, feature launches, positioning shifts
+6. Generate Competitor Intelligence Report with:
    - Executive Summary
-   - SetupClaw updates (pricing, features, positioning)
-   - HayOn AI updates (pricing, features, positioning)
-   - OpenClaw ecosystem updates
+   - Paperbell updates (pricing, features, positioning)
+   - CoachAccountable updates (pricing, features, positioning)
+   - Delenta updates (pricing, features, positioning)
+   - Other AI coaching tool updates
    - Threats & Opportunities analysis
    - Recommended ValoClaw responses
-6. Send report to Telegram
-7. Save report to workspace/competitor/reports/YYYY-MM-DD_competitor_report.txt
+7. Send report to Telegram
+8. Save report to workspace/competitor/reports/YYYY-MM-DD_competitor_report.txt
 
 ---
 
@@ -243,7 +263,19 @@ When triggered:
 
 | Job | Schedule | Next Run |
 |-----|----------|----------|
+| Forge Content Plan | Monday 8:00 AM ICT | Next Monday |
 | Competitor Intelligence | Friday 2:00 PM ICT | This Friday |
 | **Pulse Weekly Review** | **Sunday 8:00 PM ICT** | **This Sunday** |
 
 All jobs are enabled and active.
+
+---
+
+## COACH VERTICAL NOTES
+
+**Market Pivot Completed:** March 27, 2026
+- Target: High-ticket business & executive coaches
+- Pain Points: 8 specific admin/acquisition pains identified
+- Content Strategy: LinkedIn-first, coach-specific hooks
+- Scout Focus: LinkedIn coach searches, coaching communities
+- Competitors: Paperbell, CoachAccountable, Delenta (not OpenClaw space)
