@@ -1,214 +1,317 @@
 ---
 name: scout
-description: Lead generation skill for ValoClaw. Find business and executive coaches drowning in operational chaos RIGHT NOW through X/Twitter, Reddit, LinkedIn, and coaching communities. Research deeply enough that when Kyle reaches out, it feels like he already knows their practice.
+description: Coaching client intelligence skill for ValoClaw. Finds business and executive coaches experiencing operational pain, researches them deeply, and monitors competitors. Four modes: FIND COACHES, RESEARCH A COACH, COMPETITOR WATCH, DAILY SCAN.
 ---
 
-# Scout — Lead Generation Skill (Coach-Focused Version)
+# SCOUT SKILL — Coaching Client Intelligence
 
-## Part 1: Mission & Search Strategy
+## MODE 1: FIND COACHES
 
-### MISSION
-Find business and executive coaches who are drowning in admin work RIGHT NOW. Research them deeply enough that when Kyle reaches out, it feels like he already knows their practice.
+**Trigger:** "Scout coaches [criteria]"
 
-### TARGET PROFILE
-- High-ticket business coaches charging $200-500/hour
-- Executive and leadership coaches running $7,500-30,000 engagements
-- Solo or boutique practice, 1-5 people
-- Revenue: $150K-$500K+ per year
-- 12-15 active clients (ICF average is 12-13)
-- Spending $4,000-6,500/month on VA or setter
-- Posting on LinkedIn about overwhelm, admin burden, or scaling challenges
+Search the web for business coaches and executive coaches posting about:
+- Being overwhelmed with admin
+- Needing more clients
+- Struggling with content consistency
+- Hiring or firing VAs
+- Burnout from doing everything themselves
+- Wanting to scale their practice
+- Frustration with tech tools
+- Questions about AI for coaching
 
-### WHERE TO SEARCH DAILY:
+### Search Targets:
 
-**LinkedIn — PRIMARY CHANNEL (search these phrases):**
-- "30 minutes of admin per session"
-- "session notes taking forever"
-- "drowning in client follow-ups"
-- "can't scale my coaching practice"
-- "spending more time on admin than coaching"
-- "need help with client acquisition"
-- "coaching practice overwhelm"
-- "hiring a VA for my coaching business"
-- "executive coach burnout"
-- "business coach needing systems"
+**X/Twitter:**
+- #businesscoach
+- #executivecoaching
+- #coachingbusiness
+- #highticketcoach
+- #lifecoach
+- #leadershipcoaching
+- Search phrases: "drowning in admin" + coach, "need more clients" + coach, "hiring a VA" + coaching
 
-**X/Twitter — Search these phrases:**
-- "coaching session notes"
-- "admin killing my coaching business"
-- "need a practice manager"
-- "coaching business automation"
-- "follow up with prospects"
-- "LinkedIn content for coaches"
+**Reddit:**
+- r/lifecoaching
+- r/coaching
+- r/entrepreneur
 
-**Reddit — Search these subreddits:**
-- r/Coaching
-- r/Entrepreneur
-- r/SmallBusiness
-- r/LinkedIn
-- r/AskACoach
+**LinkedIn:**
+- Posts from people with "coach" in their title
+- Recent posts about overwhelm, scaling, or systems
 
-Look for posts about:
-- Session admin taking too long
-- Struggling to follow up with prospects
-- Inconsistent LinkedIn posting
-- Pipeline management chaos
-- Hiring VA frustration
-- Scaling beyond 12-15 clients
+**Coaching Communities:**
+- Indie Hackers (coaching tag)
+- Coaching forums and directories
 
-**Coaching Communities & Directories:**
-- ICF directory (filter by region, niche)
-- Noomii coaching directory
-- LinkedIn "Coaches & Consultants" groups
-- Comments on coaching platform posts (Paperbell, CoachAccountable)
+### Output for Each Coach Found:
 
-**Weekly searches:**
-- "business coach" + "overwhelmed" on LinkedIn
-- "executive coach" + "systems" on LinkedIn
-- "looking for coaching clients" + frustration signals
-- Comments on LinkedIn posts about coaching business challenges
+```
+🎯 COACH FOUND
+
+Name: [Full name]
+Platform: [X/LinkedIn/Reddit]
+Profile: [URL]
+
+What they posted:
+"[Exact quote or summary]"
+
+Coaching type: [business/executive/leadership/life/etc.]
+Practice size: [solo/small team/team with VA — if visible]
+
+Pain point identified: [admin/client acquisition/content/burnout/tech frustration]
+
+How ValoClaw solves this:
+[Specific solution tied to their pain]
+
+Draft reply (helpful, not pitchy):
+"[Add value, reference their post, end with question]"
+
+Draft DM (empathetic, one question):
+"[Lead with empathy, reference their business, ask ONE question that opens conversation]"
+---
+```
 
 ---
 
-## Part 2: Deep Research Protocol
+## MODE 2: RESEARCH A COACH
 
-For every prospect scored HOT or WARM, research deeply:
+**Trigger:** "Scout [name]"
 
-### PERSONAL INTEL:
-- Full name, title (Business Coach / Executive Coach / Leadership Coach)
-- LinkedIn URL and X handle
-- Location and timezone
-- How long they've been coaching
-- Certifications (ICF, EMCC, etc.)
-- Communication style (formal? casual? thought leadership?)
-- Biggest public frustration in last 30 days
-- Content patterns (LinkedIn posting frequency, topics)
-- Personal interests visible (hobbies, family, causes)
-- Any shared experiences with Kyle
+Deep research on a specific coach. Build a complete profile.
 
-### PRACTICE INTEL:
-- Coaching niche (executive, business, leadership, career, etc.)
-- Target client (CEOs, founders, executives, entrepreneurs)
-- Session format (1:1, group, hybrid)
-- Pricing visible (hourly rates, package prices)
-- Client load estimate (from posts about "my 12 clients" etc.)
+### Research Checklist:
+
+**Basic Intel:**
+- Full name and professional title
+- Coaching niche (executive/business/leadership/life/career/etc.)
+- Location/timezone
 - Years in practice
-- Tech stack if visible (Calendly, Notion, HubSpot, spreadsheets)
-- Current pain points from their content
 
-### PAIN SCORING (rate each 1-5):
-- Session admin burden (notes, recaps, action plans)
-- Client acquisition struggle (follow-ups, pipeline)
-- Content inconsistency (LinkedIn posting)
-- Calendar/schedule chaos
-- Proposal/discovery call admin
-- General operational overwhelm
-- **TOTAL PAIN SCORE out of 30**
+**Digital Footprint:**
+- Website URL
+- LinkedIn profile URL
+- X/Twitter handle
+- Other social platforms
 
-### TIMING ASSESSMENT:
-- In pain RIGHT NOW or was this weeks ago?
-- Already explored solutions (VA, platforms, tools)?
-- Actively looking or just venting?
-- Budget signals? (mentions rates, spending on VA, etc.)
-- Urgency: **IMMEDIATE / THIS WEEK / THIS MONTH / SOMEDAY**
+**Business Model:**
+- What they charge (hourly rate, package prices, programme costs)
+- Client types (CEOs, founders, managers, entrepreneurs)
+- Typical engagement length
+- Group vs 1:1 vs hybrid
+
+**Operations:**
+- Team size (solo, VA, setter, small team)
+- Tech stack mentioned (Calendly, Notion, HubSpot, spreadsheets, etc.)
+- Content frequency (posts per week on LinkedIn/X)
+- Marketing channels used
+
+**Pain Signals:**
+- Recent posts about overwhelm or burnout
+- Mention of admin burden
+- Hiring/firing struggles
+- Client acquisition complaints
+- Tech frustration
+- Scaling challenges
+
+**Personal Hooks:**
+- Shared connections with Kyle
+- Similar background or experience
+- Mutual interests
+- Recent achievements or milestones
+- Content themes they care about
+
+**ValoClaw Fit:**
+- Recommended product (ValoCore/ValoPrime/ValoGuard)
+- Specific angle (session admin, follow-ups, content, pipeline)
+- Estimated pain score (1-5 across 6 categories)
+
+### Output Format:
+
+```
+🔍 COACH DEEP DIVE — [Name]
+
+📋 BASIC INFO
+Name: [Full name]
+Title: [Professional title]
+Niche: [Type of coaching]
+Location: [City/Timezone]
+Experience: [Years in practice]
+
+🔗 DIGITAL FOOTPRINT
+Website: [URL]
+LinkedIn: [URL]
+X/Twitter: [Handle]
+Other: [Instagram, YouTube, etc.]
+
+💰 BUSINESS MODEL
+Pricing: [What they charge]
+Clients: [Who they serve]
+Engagements: [Typical length/format]
+Estimated revenue: [If calculable]
+
+👥 OPERATIONS
+Team: [Solo/VA/Setter/Team]
+Tech stack: [Tools mentioned]
+Content: [Posts per week]
+Marketing: [Primary channels]
+
+🚨 PAIN SIGNALS
+[Specific posts, quotes, or indicators of pain]
+
+💬 PERSONAL HOOKS
+[Conversation starters, shared interests, recent wins]
+
+🎯 VALOCLAW FIT
+Recommended product: [ValoCore/ValoPrime/ValoGuard]
+Approach angle: [Which pain to lead with]
+Pain score: [X/30]
+Timing: [IMMEDIATE/THIS WEEK/THIS MONTH/SOMEDAY]
+
+Draft DM:
+"[Personalized, empathetic, one question]"
+```
 
 ---
 
-## Part 3: Outreach Crafting & Output Format
+## MODE 3: COMPETITOR WATCH
 
-### PUBLIC REPLY RULES:
-- NEVER pitch ValoClaw in public replies
-- Add genuine value — share a specific tip or insight
-- Reference something specific from THEIR post
-- End with a question that shows expertise
-- Keep under 280 chars for X
-- For LinkedIn: 2-3 sentences max, thoughtful comment
+**Trigger:** "Scout competitor [name]"
 
-### DM RULES:
-- Reference their specific post or pain point
-- Reference something personal about their practice
-- Lead with empathy not a pitch
-- Never say "I sell" or "my service" or "check out my website"
-- Ask ONE question that opens conversation
-- Under 150 words
-- Tone: peer-to-peer coach, not salesperson
+Research coaching platforms and competitors.
 
-### OUTPUT FORMAT:
+### Primary Competitors:
+
+**Coaching Platforms:**
+- Paperbell
+- CoachAccountable
+- Delenta
+- Practice.do
+
+**OpenClaw Builders:**
+- SetupClaw
+- HayOn AI
+- Any new entrants
+
+**AI Coaching Tools:**
+- Tools trying to REPLACE coaches
+- Tools trying to SUPPORT coaches
+
+### Research Points:
+
+**For Coaching Platforms:**
+- Pricing (monthly, per coach, per client)
+- Key features (scheduling, payments, session notes, etc.)
+- What's missing (automation, AI, follow-ups, content)
+- Customer reviews and complaints
+- Recent updates or launches
+
+**For OpenClaw Builders:**
+- Pricing and packages
+- Do they target coaches specifically?
+- What's their positioning?
+- Recent content or launches
+
+**For AI Coaching Tools:**
+- Are they competitor or complementary?
+- Replacement angle vs support angle
+- Pricing and traction
+
+### Output Format:
 
 ```
-🎯 SCOUT REPORT — [Date]
+👁️ COMPETITOR INTEL — [Company Name]
 
-SUMMARY: [X] prospects | [X] hot | [X] warm | [X] cold
+Category: [Platform/OpenClaw Builder/AI Tool]
+Website: [URL]
+Pricing: [Details]
 
-🔥 HOT PROSPECTS (Pain 20+, Timing IMMEDIATE):
+Key Features:
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
 
-1. [Name] — [Title] 
-   Platform: [where] | Profile: [URL]
-   Practice: [niche] | [years in practice] | [location]
-   
-   What they said: "[quote]"
-   
-   Pain Score: [X]/30 | Timing: [urgency]
-   Budget signals: [rates mentioned, VA spending, etc.]
-   Best angle: [which ValoClaw solution fits — session admin, follow-ups, content, etc.]
-   
-   Public reply: "[draft]"
-   DM draft: "[draft]"
-   Personal hooks: [things Kyle can reference for rapport]
+What's Missing (Our Opportunity):
+- [Gap 1]
+- [Gap 2]
 
-🟡 WARM PROSPECTS:
-[same format condensed]
+Recent Updates:
+[New features, pricing changes, launches]
 
-🧊 COLD WATCH LIST:
-[name — platform — one line reason]
+Customer Sentiment:
+[Reviews, complaints, praise]
 
-📊 INSIGHTS:
-- Best lead today: [why]
-- Pattern observed: [what we're seeing in the market]
-- Recommended next action: [what to do with these leads]
+Threat Level: 🟢 Low / 🟡 Medium / 🔴 High
 
-NARRATIVE FOR KYLE:
-[2-3 sentence summary he can use in conversation]
+Recommended Response:
+[How ValoClaw should position against them]
 ```
-
-## TRIGGERS:
-- "run Scout"
-- Daily 9am cron
-- "find me coaching leads"
-- "research [coach name]"
 
 ---
 
-## COACH-SPECIFIC PAIN PHRASES TO MONITOR
+## MODE 4: DAILY SCAN
 
-Use these as search queries and alerts:
+**Trigger:** "Scout scan" or daily 9am cron
 
-**Session Admin:**
-- "30 minutes writing session notes"
-- "prep for coaching sessions"
-- "client action items"
-- "session recap taking forever"
+Quick morning intelligence briefing.
 
-**Client Acquisition:**
-- "struggling to find coaching clients"
-- "client acquisition for coaches"
-- "follow up with prospects"
-- "discovery calls not converting"
+### Tasks:
 
-**Content/Marketing:**
-- "inconsistent on LinkedIn"
-- "content for coaches"
-- "marketing my coaching practice"
-- "posting on LinkedIn as a coach"
+1. **Trending Conversations**
+   - Any coaching-related topics trending on X/LinkedIn
+   - Viral posts from coaches about pain points
+   - AI + coaching conversations gaining traction
 
-**Operations/Scaling:**
-- "can't scale my coaching business"
-- "admin work taking over"
-- "hiring VA for coaching"
-- "coaching practice systems"
+2. **Inquiry Check**
+   - Check Gmail for inbound inquiries (if GOG auth working)
+   - Flag any new leads or conversations
 
-**Burnout:**
-- "coaching burnout"
-- "too many clients not enough time"
-- "working 50 hours coaching 15"
-- "drowning in my coaching business"
+3. **LinkedIn DM Reminder**
+   - Remind Kyle to check LinkedIn DMs manually
+   - Note any expected replies from previous outreach
+
+4. **Market Insight**
+   - One observation about the coaching market today
+   - New competitor, shifting pain point, emerging trend
+
+### Output Format:
+
+```
+📅 SCOUT DAILY SCAN — [Date]
+
+🔥 TRENDING
+[What's hot in coaching conversations today]
+
+📨 INQUIRIES
+[Any new leads or inbound messages]
+
+💬 LINKEDIN DM CHECK
+Reminder: Check LinkedIn DMs for replies from:
+- [List any pending conversations]
+
+💡 MARKET INSIGHT
+[One key observation about the coaching market]
+
+⚡️ TODAY'S PRIORITY
+[Recommended focus for the day]
+```
+
+---
+
+## TRIGGERS SUMMARY
+
+| Command | Mode | Action |
+|---------|------|--------|
+| "Scout coaches [criteria]" | FIND COACHES | Search for coaches posting about pain points |
+| "Scout [name]" | RESEARCH A COACH | Deep dive on specific coach |
+| "Scout competitor [name]" | COMPETITOR WATCH | Research coaching platform or competitor |
+| "Scout scan" | DAILY SCAN | Quick morning intelligence briefing |
+| Daily 9am cron | DAILY SCAN | Automated daily check |
+
+---
+
+## SAVE LOCATION
+
+Save all Scout reports to:
+- `workspace/scout/reports/YYYY-MM-DD_scout_report.txt`
+- `workspace/scout/research/[coach-name].txt`
+- `workspace/scout/competitors/[company-name].txt`

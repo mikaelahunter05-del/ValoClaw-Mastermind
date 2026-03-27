@@ -9,40 +9,26 @@
 - **Business:** ValoClaw — AI practice managers for business and executive coaches
 - **Website:** valoclaw.com
 - **Founder:** Kyle Holland
-- **ValoCore:** $1,795 | ValoPrime: From $4,000+ | ValoGuard: $750/mo
-- **X:** @ValoClaw | **TikTok:** @valotheaiagent | **LinkedIn:** linkedin.com/in/valoclaw
-- **Content speaks directly to business and executive coaches**
-- **Coaching language:** sessions, engagements, programme design, client roster, discovery calls, enrolment conversations, ICF, referral networks, billable hours
-- **Agent name:** ValoBot | **Role:** Head of AI Growth
-- **Sub-agents:** Scout (leads), Forge (content), Pulse (tracking)
-- **Competitors:** Paperbell, CoachAccountable, Delenta (coaching platforms), generic VA services
+- **ValoCore:** $1,795 one-time
+- **ValoPrime:** From $4,000+ (founding rate $4,000 for first 3 clients in exchange for testimonial)
+- **ValoGuard:** $750/month
+- **ICP:** High-ticket coaches, $150K-500K revenue, 12-15 clients, charging $200-500/hour, drowning in admin
+- **Competitors:** Paperbell, CoachAccountable, Delenta (session tools, not full automation), SetupClaw, HayOn AI (generic OpenClaw builders, not coaching-focused)
+- **Blue ocean:** No one targets coaches with OpenClaw specifically
 
-**TARGET MARKET:** High-ticket business and executive coaches
-- Charging $200-500/hour, $7,500-30,000 engagements
-- Solo/boutique practice, 1-5 people
-- Revenue: $150K-$500K+ per year
-- 12-15 active clients (ICF average)
-- Spending $4,000-6,500/month on VA or setter
+## KEY MARKET DATA (use in content and sales)
 
-**PAIN POINTS WE SOLVE:**
-1. Session admin: 30-45 min notes/recaps per session = 15-30 hrs/month
-2. Client acquisition: 64% cite it as #1 challenge, no system to generate referrals
-3. Follow-up failure: 80% of deals need 5+ touches, 44% stop after one
-4. Content inconsistency: Post once/week vs top coaches posting 3-5x
-5. Pipeline chaos: Leads scattered in email, DMs, notebooks
-6. Proposal waste: 4-6 hours per client vs 1-2 with templates
-7. VA dependency: Paying $4K-6.5K/month for limited help
-8. Burnout: 40-50 hour weeks, only 15-20 hours actual coaching
-
-**OUR SOLUTIONS:**
-- Morning brief: Session schedule, client backgrounds, prep notes
-- Session prep: AI pulls notes, action items, LinkedIn activity, company news
-- Session recaps: 90-second review vs 35-minute manual writeup
-- Follow-up sequences: Automated 5-8 touch cadence for every prospect
-- Content engine: 3-5 LinkedIn posts/week in their voice
-- Pipeline management: Daily briefing of leads, stale prospects, proposals
-- Proposal drafting: AI generates from discovery notes and templates
-- Competitor monitoring: Weekly intel on other coaches and platforms
+- Average coach: 12-13 clients, $71,700/year income
+- Executive coaches: $82,949 average, top earners $200K+
+- 64% cite client acquisition as #1 challenge
+- 30-45 min admin per session
+- 85% of clients choose coach via referrals
+- 80% of deals need 5+ follow-ups
+- 44% stop after one follow-up
+- Only 1% of LinkedIn users post weekly
+- VA costs: $4,000-6,500/month
+- Setter costs: $4,000-6,500/month
+- Combined headcount avoidance: $7,500-12,000/month
 
 ---
 
