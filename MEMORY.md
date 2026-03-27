@@ -60,11 +60,71 @@
 - Never expose API keys
 - Tag revenue ideas with [NEW REVENUE IDEA]
 
-## EXPERIMENT
+## EXPERIMENT — THE 30-DAY COACHING MARKET TEST
 
-- **30-day challenge:** $200 budget, $10K revenue target
-- **Start date:** [will be set when we launch]
-- **All daily logs saved to memory/**
+**Launch Date:** Monday, March 30, 2026
+**Budget:** $200
+**Revenue Target:** $10,000 in 30 days
+**Target Audience:** Business and executive coaches
+
+### THE PREMISE
+I built an AI practice manager that does everything a $12,000/month team does for a coaching practice — for under $50/month. For 30 days I'm testing it, documenting everything, and showing business and executive coaches what's possible.
+
+### THE CONTENT ANGLE
+Every video shows the AI doing something a coach would recognize from their own practice:
+- Session prep appearing before a coaching call
+- A recap generated in 90 seconds after a session
+- A ghosted prospect re-engaged by follow-up #4
+- A full week of LinkedIn content planned in one message
+- A morning brief with today's coaching schedule
+- Me eating popcorn while the AI does admin
+
+### THE POPCORN BRAND
+When ValoBot is working autonomously — prepping sessions, drafting follow-ups, writing content, monitoring competitors — I sit back and eat popcorn on camera. The visual contrast of "serious AI work happening" and "human eating popcorn" communicates the ease better than any words could. This becomes a signature visual that coaches associate with ValoClaw.
+
+**Popcorn Rules:**
+- Use 2-3 times per week, not every video
+- Only during genuinely autonomous moments
+- Text overlay always explains what the AI is doing
+- Never during demo videos where I'm typing prompts
+- The popcorn is the payoff after showing the setup
+
+### 4-WEEK STRUCTURE
+
+**WEEK 1: THE LAUNCH (Days 1-7)**
+Theme: "I built an AI that runs a coaching practice"
+Goal: Establish the experiment, show the system, hook coaches
+
+- Day 1: Launch video — "I built an AI practice manager for business coaches. $200 budget. 30 days. Here's everything it does."
+- Day 2: Morning brief arrives — "My AI prepped my entire day before I woke up. Here's what it sent."
+- Day 3: Session prep demo — "Watch my AI prep for a coaching session in 30 seconds. This usually takes 20-40 minutes."
+- Day 4: Popcorn moment #1 — "My AI is writing my LinkedIn content for the week. I'm eating popcorn."
+- Day 5: Follow-up demo — "My AI just re-engaged a prospect I forgot about 9 days ago. Touch number four."
+- Day 6: Full system tour — "Here's everything running in my AI practice manager. 9 automations. Zero effort."
+- Day 7: Week 1 recap — "7 days. Here's every metric."
+
+**WEEK 2: THE PROOF (Days 8-14)**
+Theme: "This is what coaches are missing"
+Goal: Show specific coaching workflows, address objections
+
+- Day 8: Session recap demo — "35 minutes to write a session recap. Or 90 seconds. Choose."
+- Day 9: Pain mirror post — "13 clients. $71,700/year. 15 hours on admin. The average coach's reality."
+- Day 10: Popcorn moment #2 — "My AI is researching a new coaching prospect. Their LinkedIn, their company, their pain points. I'm eating popcorn."
+- Day 11: End of day review — "My AI reviews its own performance every night. Here's tonight's report."
+- Day 12: VA comparison — "Your VA costs $5,000/month and works 9-5. My AI costs $40/month and never sleeps."
+- Day 13: Content planning — "My AI planned 7 days of coaching content in one message. Here's the full plan."
+- Day 14: Week 2 recap with numbers
+
+**WEEK 3: THE RESULTS (Days 15-21)**
+Theme: "It's actually working"
+Goal: Show traction, engagement, discovery calls
+
+**WEEK 4: THE CLOSE (Days 22-30)**
+Theme: "Here's how you get one"
+Goal: Convert engaged coaches to clients
+
+### DAILY LOGS
+All daily logs saved to memory/YYYY-MM-DD.md
 
 ## MEMORY LOGGING PROTOCOL
 
