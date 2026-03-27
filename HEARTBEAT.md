@@ -100,17 +100,48 @@ When triggered:
 
 **Job ID:** `pending-creation`
 
-**Purpose:** Generate weekly content calendar for coach-focused marketing.
+**Purpose:** Run Forge skill to produce full week of coaching-focused content.
 
 When triggered:
-1. Review past week's content performance
-2. Identify highest-engagement coach pain points
-3. Create 7-day content calendar targeting specific pain points (session admin, follow-ups, content, pipeline, VA dependency, burnout, proposals)
-4. Draft hooks for each post (LinkedIn primary, X secondary)
-5. Generate video scripts for top 3 pieces
-6. Ensure 40/25/20/10/5 content mix ratio
-7. Send weekly plan to Telegram for approval
-8. Save to workspace/content/weekly/YYYY-MM-DD_content_plan.txt
+1. Review past week's Pulse data — which pain points drove most engagement
+2. Review which content formats performed best (Pain Mirror/Demo Proof/Transformation/Education/Soft Sell)
+3. Create 7-day content calendar following strict ratios:
+   - Pain Mirror: 35% (Mon, Sat)
+   - Demo Proof: 30% (Tue, Fri videos)
+   - Transformation Story: 20% (Wed)
+   - Education: 10% (Thu)
+   - Soft Sell: 5% (Sun only)
+4. Draft 7 video concepts with hooks, scripts, and film prompts
+5. Draft platform-specific versions for LinkedIn (long-form), X (short/thread), TikTok (vertical video)
+6. Include full hashtag block for every post
+7. Suggest 2-3 popcorn moments for the week (Kyle eating popcorn while AI works)
+8. Include content mix check and pain point coverage verification
+9. Send complete weekly plan to Telegram for approval
+10. Save to workspace/content/weekly/YYYY-MM-DD_content_plan.txt
+
+OUTPUT FORMAT:
+✍️ WEEKLY CONTENT PLAN — Week [X]
+
+THEME: [Weekly pain point focus]
+
+=== 7 VIDEO CONCEPTS ===
+[Full scripts with hooks, setup, demo, popcorn moments, CTAs]
+
+=== PLATFORM CONTENT ===
+LinkedIn: [Mon, Wed, Thu, Sun posts]
+X: [Thu thread, Sat short post]
+TikTok: [Tue, Fri videos]
+
+=== POPCORN MOMENTS (2-3) ===
+1. [Day]: [Description]
+2. [Day]: [Description]
+3. [Day]: [Description]
+
+=== CONTENT MIX CHECK ===
+Pain Mirror: [X]/7 | Demo Proof: [X]/7 | Transformation: [X]/7 | Education: [X]/7 | Soft Sell: [X]/7
+
+=== PAIN POINT COVERAGE ===
+[Check which of 8 pains are covered this week]
 
 ---
 
