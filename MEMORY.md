@@ -119,9 +119,47 @@ Goal: Show specific coaching workflows, address objections
 Theme: "It's actually working"
 Goal: Show traction, engagement, discovery calls
 
+- Day 15: First coach DM — "A business coach just DMed me asking about ValoClaw. Day 15."
+- Day 16: Popcorn moment #3 — "My AI is drafting a proposal for a coaching client. Custom pricing, scope, timeline. I'm eating popcorn."
+- Day 17: Discovery call prep — "My AI researched a prospect before our call. I knew more about their practice than they expected."
+- Day 18: Behind the scenes — "Here's every tool my AI uses. Total cost: $40/month."
+- Day 19: Competitor analysis — "My AI monitors coaching platforms weekly. Here's what Paperbell launched."
+- Day 20: The coaching math — "Replace a $6,500/month VA with a $40/month AI. Save $77,000/year. The maths."
+- Day 21: Week 3 recap with pipeline update
+
 **WEEK 4: THE CLOSE (Days 22-30)**
-Theme: "Here's how you get one"
-Goal: Convert engaged coaches to clients
+Theme: "Want this for your practice?"
+Goal: Convert followers to discovery calls
+
+- Day 22: Full experiment stats so far
+- Day 23: Popcorn moment #4 — "My AI handled 147 emails, prepped 12 sessions, and re-engaged 3 prospects this week. I ate a lot of popcorn."
+- Day 24: What failed and what I'd change
+- Day 25: Day 1 vs Day 25 comparison
+- Day 26: "What this costs to run" full breakdown
+- Day 27: Soft sell — "Everything my AI does, I deploy for coaching practices in 48 hours."
+- Day 28: Final competitor report
+- Day 29: Honest results video
+- Day 30: THE FINALE — "$200. 30 days. Every number. Every lesson. Was it worth it?"
+
+### POSTING SCHEDULE
+
+Every video posts to:
+- X
+- LinkedIn
+- TikTok
+- Instagram Reels
+- Facebook Reels
+- Threads
+
+**Hashtags on every post:**
+#businesscoach #executivecoaching #coachingbusiness #highticketcoach #coachingautomation
+
+**Platform Notes:**
+- LinkedIn posts get longer captions with coaching insights
+- X posts are punchy with one clear hook
+- TikTok/Instagram Reels are vertical 9:16
+- Facebook Reels cross-posted from Instagram
+- Threads copy X format
 
 ### DAILY LOGS
 All daily logs saved to memory/YYYY-MM-DD.md
