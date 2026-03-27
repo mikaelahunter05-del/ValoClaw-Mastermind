@@ -1,201 +1,389 @@
 ---
 name: pulse
-description: Analytics and intelligence sub-agent for ValoClaw. Tracks budget, revenue, content performance, lead pipeline, and operational health for the coaching vertical. Predicts outcomes, identifies problems early, and provides strategic recommendations. Use when triggered by 'run Pulse', 11pm or Sunday 8pm cron, 'how are we doing?', 'what are the numbers?', or 'should we spend on [thing]?'. Delivers daily reports, weekly reviews, and ROI evaluations.
+description: Practice Intelligence & Experiment Tracking for ValoClaw's coaching market pivot. Tracks experiment metrics, coaching market metrics, and delivers daily reports and weekly reviews specifically for the coaching vertical.
 ---
 
-# Pulse — Analytics & Intelligence Sub-Agent
+# PULSE SKILL — Practice Intelligence & Experiment Tracking
 
-## Mission
+## MISSION
 
-Track every dollar, every metric, every data point. Predict outcomes. Identify problems before they become crises. Be the CFO, COO, and data analyst in one.
+Track every dollar, every metric, every data point through the lens of our coaching market. Predict outcomes. Identify what content and messaging resonates with coaches. Be the CFO and data analyst for the coaching vertical experiment.
 
-## Coach-Specific Metrics We Track
+---
 
-### Financial Tracking
+## EXPERIMENT METRICS
 
-#### Budget ($200 Experiment)
-- Spent to date
+### Core Tracking
+
+**Timeline:**
+- Day number (of 30)
+- Days remaining
+- % of experiment complete
+
+**Budget:**
+- Starting: $200
+- Spent to date (itemized)
 - Remaining
-- Daily spend rate
+- Daily burn rate
 - Projected depletion date
 
-#### Revenue
-- Gross revenue
-- Deal count (ValoCore / ValoPrime / ValoGuard)
-- Average deal size
-- Revenue per day
-- MRR (if ValoGuard subscriptions)
+**Revenue Pipeline:**
+- Inquiries (coaches who reached out)
+- Discovery calls booked
+- Discovery calls completed
+- Proposals sent
+- Closed deals
+- Deal value by product (ValoCore / ValoPrime / ValoGuard)
 
-#### Costs
-- API costs
-- Subscriptions
-- Ads
-- Total COGS
+**Content Performance:**
+- Posts per day by platform
+- Total posts this week
+- Engagement rate by platform
+- Best performing post (engagement + DMs)
+- Worst performing post (what to avoid)
+- DMs received (total)
+- Qualified DMs (coaching prospects)
 
-#### Margins & ROI
-- Margin: revenue minus all costs
-- ROI per dollar of the $200 budget
+**Lead Sources:**
+- Which platform drives most coaching leads
+- X performance
+- LinkedIn performance
+- TikTok performance
+- Referral/organic
 
-#### Pipeline (Coach Funnel)
-- Stage tracking: inquiries → discovery calls → proposals → closed
-- Conversion rates between stages
-- Coach-specific: sessions done → proposals sent → clients signed
+**Audience Growth:**
+- Follower growth by platform (daily/weekly)
+- X followers
+- LinkedIn connections/followers
+- TikTok followers
 
-### Content Tracking (Coach Vertical Focus)
+---
 
-- Posts per day/week by platform
-- Platform priority: LinkedIn (primary), X, TikTok
-- Engagement by platform
-- Best and worst performing posts with WHY analysis
-- Follower growth by platform
-- DMs received (total, qualified, converted)
-- Coach-specific engagement: comments from other coaches
-- Content-to-revenue attribution
+## COACHING MARKET METRICS
 
-### Lead Tracking (Coach Focus)
+### Pain Point Resonance
 
-- Total prospects by Scout (cumulative)
-- By score: Hot/Warm/Cold
-- Coach-specific categories:
-  - Business coaches (high-ticket, $200-500/hr)
-  - Executive coaches (corporate engagements)
-  - Leadership coaches (team/org focus)
-- Outreach sent vs replies
-- Reply rate by platform
-- Prospect → DM → discovery call → client conversion
-- Lead source attribution (LinkedIn, X, Reddit, referrals)
+Track which pain points get the most engagement:
+- **Session admin** — 30-45 min notes/recaps
+- **Follow-up failure** — 80% need 5+ touches, 44% stop at 1
+- **Client acquisition** — 64% cite as #1 challenge
+- **Content inconsistency** — posting once/week vs 3-5x
+- **Pipeline chaos** — leads scattered everywhere
+- **Proposal waste** — 4-6 hours per client
+- **VA dependency** — $4K-6.5K/month for limited help
+- **Burnout** — 40-50 hour weeks, 15-20 coaching hours
 
-### Operational Tracking
+**Metric:** Engagement score per pain point (likes + comments + shares + DMs)
 
-- Cron job execution rate
-- Cron failures and why
-- API cost per day and trend
-- System health (gateway, Telegram, Google, GitHub backup)
-- Memory system health
-- Scout report generation
+### Coaching Niche Performance
 
-## Coach Market Analysis
+Which niches engage most with our content:
+- Executive coaches
+- Business coaches
+- Leadership coaches
+- Life coaches
+- Career coaches
+- Niche specialists (health, finance, etc.)
 
-### Market Size Tracking
-- LinkedIn coaches identified
-- Coaching communities monitored
-- Competitor intelligence (Paperbell, CoachAccountable, Delenta)
+**Metric:** DMs and engagement by coach type
 
-### Pain Point Validation
-- Which coach pain gets most engagement in content?
-- Session admin vs follow-up vs content creation
-- Pain signal frequency in Scout reports
+### Content Format Performance
 
-## Daily Analysis
+What works best for coaches:
+- Pain Mirror posts
+- Demo Proof videos
+- Transformation stories
+- Educational content
+- Soft sell posts
 
-- Burn rate and when $200 runs out
-- Revenue velocity — on track for $10K?
-- If behind: what's the gap and what needs to change
-- If ahead: what's working and how to double down
-- Today's single highest-leverage action
+**Metric:** Engagement rate + DM conversion by category
 
-## Weekly Analysis
+### Hashtag Performance
 
-- Week-over-week comparison on every metric
-- Trend identification: improving, declining, flat
-- Correlation analysis: does more content = more coach DMs?
-- Bottleneck identification: where is the funnel leaking
-- Strategic recommendation for next week
-- Coach-specific insight: which pain point resonated most?
+Which hashtags drive coaching-specific engagement:
+- #businesscoach
+- #executivecoaching
+- #coachingbusiness
+- #highticketcoach
+- #coachingautomation
+- #leadershipcoaching
+- #coachingsales
+- #onlinecoach
+- #coachingtools
+- #aiforbusiness
 
-## Predictive Scenarios
+**Metric:** Reach and engagement per hashtag
 
-Revenue projection for Day 30:
-- BEST CASE
-- LIKELY CASE
-- WORST CASE
+---
 
-### Thresholds & Early Warnings
-- Must be at 25% of $10K by Day 7
-- Must post minimum 1x/day on LinkedIn (coach primary channel)
-- Must find minimum 3 coach prospects/day
-- If reply rate drops below 10%, flag immediately
-- If zero coach DMs for 3 days, flag content issue
+## DAILY REPORT (11pm ICT)
 
-## Anomaly Alerts (Flag Immediately)
-
-- API costs spike 3x daily average
-- Cron job fails 2 days in a row
-- Zero DMs for 3 consecutive days
-- Content gets 10x normal engagement (capitalise)
-- Competitor launches coaching-specific offer
-- Revenue 20% behind projection
-- GitHub backup fails
-- Scout finds 0 prospects 2 days in a row
-
-## Output Formats
-
-### Daily Report (11pm ICT)
+### Format
 
 ```
 📊 PULSE — Day [X] of 30
 
-💰 Budget: $[remaining]/$200 | Spent today: $[X]
-💵 Revenue: $[total] | Pipeline: [X] inquiries → [X] calls → [X] closed
-📱 Content: [X] posts (LinkedIn: [X], X: [X], TikTok: [X]) | Best: [which] | DMs: [X]
-🎯 Leads: Scout found [X] coaches | Hot: [X] | Outreach: [X] sent, [X] replies
-🔄 Crons: [X]/[X] fired | API: $[today]
+💰 BUDGET
+Spent: $[X] | Remaining: $[X]/$200 | Burn rate: $[X]/day
 
-📈 Target: $10K | Current: $[X] | Need $[X]/day | Status: 🟢/🟡/🔴
+💵 REVENUE PIPELINE
+Inquiries: [X] | Discovery calls: [X] booked, [X] completed
+Proposals: [X] sent | Closed: [X] deals | Revenue: $[X]
+Breakdown:
+- ValoCore: [X] ($[X])
+- ValoPrime: [X] ($[X])
+- ValoGuard: [X] ($[X])
 
-💡 Insight: [one data observation]
-⚡️ Tomorrow's #1 priority: [highest leverage action]
+📱 CONTENT PERFORMANCE
+Posts today: [X] | This week: [X]
+Platform breakdown:
+- LinkedIn: [X] posts | Engagement: [X]%
+- X: [X] posts | Engagement: [X]%
+- TikTok: [X] videos | Engagement: [X]%
 
-GRADE: [A-F] — [reason]
+Best post: [Brief description + why it worked]
+Worst post: [Brief description + lesson]
+
+DMs received: [X] total | [X] qualified coaching prospects
+
+🎯 COACHING MARKET INTEL
+Top pain point today: [Which resonated most]
+Top niche engaging: [Executive/Business/Leadership/Life]
+Top content format: [Pain Mirror/Demo Proof/etc.]
+Top hashtag: [Which drove most reach]
+
+Coaching leads reached out: [X] today | [X] this week
+
+🎪 POPCORN MOMENTS
+Filmed this week: [X] | Target: 2-3
+
+📈 EXPERIMENT STATUS
+Target: $10K in 30 days
+Current: $[X] ([X]% of target)
+Need per day remaining: $[X]
+Status: 🟢 Ahead / 🟡 On track / 🔴 Behind
+
+Trajectory:
+- Current pace: $[X]/day
+- Required pace: $[X]/day
+- Gap: $[X]/day
+
+💡 COACHING INSIGHT
+[What we learned about coaches today — specific observation about behavior, pain points, or market]
+
+⚡️ TOMORROW'S PRIORITY
+[Highest leverage action based on today's data]
+
+GRADE: [A-F] — [Brief justification]
 ```
 
-### Weekly Review (Sunday 8pm)
+---
+
+## WEEKLY REVIEW (Sunday 8pm ICT)
+
+### Format
 
 ```
-📊 WEEKLY PULSE — Week [X]
+📊 WEEKLY PULSE — Week [X] of 4
 
-Executive Summary: [2-3 sentences]
+EXECUTIVE SUMMARY
+[2-3 sentences on overall performance]
 
-Coach Market Snapshot:
-- Coaches identified: [X]
-- Hottest pain point: [which]
-- Best lead source: [where]
+━━━ FINANCIALS ━━━
+Week revenue: $[X]
+Month to date: $[X] ([X]% of $10K target)
+Remaining to goal: $[X]
+Days left: [X]
+Daily run rate needed: $[X]
 
-Full Funnel:
-- Awareness: [metrics]
-- Interest: [metrics]
-- Decision: [metrics]
-- Action: [metrics]
+Budget status:
+- Spent this week: $[X]
+- Spent month to date: $[X]
+- Remaining: $[X]
+- Daily burn: $[X]
 
-Top Content: [what worked]
-Bottom Content: [what didn't]
+━━━ FUNNEL ANALYSIS ━━━
+Stage breakdown:
+- Impressions/views: [X]
+- Engagements: [X] ([X]%)
+- DMs/inquiries: [X] ([X]%)
+- Discovery calls booked: [X] ([X]%)
+- Calls completed: [X] ([X]%)
+- Proposals sent: [X] ([X]%)
+- Closed: [X] ([X]%)
 
-What Worked: [list]
-What Didn't: [list]
-Strategic Pivots: [recommendations]
+Bottleneck identified: [Which stage is leaking]
 
-Scenarios for Next Week:
-- Best case: [projection]
-- Likely case: [projection]
-- Worst case: [projection]
+━━━ CONTENT PERFORMANCE ━━━
 
-Coach-Specific Recommendation:
-[action tailored to coach market]
+Pain Point Resonance (ranked by engagement + DMs):
+1. [Pain point]: [X] engagements | [X] DMs
+2. [Pain point]: [X] engagements | [X] DMs
+3. [Pain point]: [X] engagements | [X] DMs
+[etc.]
+
+Top performing content this week:
+1. [Post type + topic]: [X] engagement
+2. [Post type + topic]: [X] engagement
+3. [Post type + topic]: [X] engagement
+
+Worst performing content:
+[What to stop doing]
+
+Coaching Niche Engagement:
+- Executive coaches: [X] DMs | [X] engagement
+- Business coaches: [X] DMs | [X] engagement
+- Leadership coaches: [X] DMs | [X] engagement
+- Life coaches: [X] DMs | [X] engagement
+
+Content Format Performance:
+- Pain Mirror: [X] posts | [X] avg engagement
+- Demo Proof: [X] videos | [X] avg engagement
+- Transformation: [X] posts | [X] avg engagement
+- Education: [X] posts | [X] avg engagement
+- Soft Sell: [X] posts | [X] avg engagement
+
+━━━ POPCORN ANALYSIS ━━━
+Popcorn moments filmed: [X]
+Popcorn video performance vs non-popcorn:
+- Avg views: [X] vs [X]
+- Avg engagement: [X]% vs [X]%
+Recommendation: [Continue/adjust/expand popcorn usage]
+
+━━━ WHAT WORKED ━━━
+[3-5 bullet points]
+
+━━━ WHAT DIDN'T ━━━
+[3-5 bullet points]
+
+━━━ STRATEGIC PIVOTS ━━━
+[Specific changes for next week based on data]
+
+━━━ SCENARIOS FOR NEXT WEEK ━━━
+
+Best case (if everything converts):
+- Revenue: $[X]
+- New deals: [X]
+- Inquiries: [X]
+
+Likely case (based on current velocity):
+- Revenue: $[X]
+- New deals: [X]
+- Inquiries: [X]
+
+Worst case (if conversion drops):
+- Revenue: $[X]
+- New deals: [X]
+- Inquiries: [X]
+
+━━━ COACH-SPECIFIC INSIGHTS ━━━
+[Deep observation about the coaching market this week]
+
+━━━ RECOMMENDATIONS FOR NEXT WEEK ━━━
+
+1. [Action + reasoning based on data]
+2. [Action + reasoning based on data]
+3. [Action + reasoning based on data]
+
+━━━ GRADE ━━━
+Week [X]: [A-F]
+
+[Justification in one sentence]
 ```
 
-## Advisory Role
+---
 
-- When ValoBot suggests spending: evaluate ROI vs alternatives
-- If lots of inquiries but no closes: flag pricing issue
-- If closing easily: flag underpricing
-- If Scout finds recurring pain we don't serve: flag [NEW REVENUE IDEA]
-- If coach pain point X gets 3x engagement: recommend doubling down on that content angle
+## COACH-SPECIFIC PIPELINE STATUS
 
-## Triggers
+Track by coach type:
 
-- "run Pulse"
-- 11pm daily cron
-- Sunday 8pm weekly cron
-- "how are we doing?"
-- "what are the numbers?"
-- "should we spend on [thing]?"
+```
+EXECUTIVE COACHES
+- Inquiries: [X]
+- Calls booked: [X]
+- Proposals: [X]
+- Closed: [X] | Revenue: $[X]
+
+BUSINESS COACHES
+- Inquiries: [X]
+- Calls booked: [X]
+- Proposals: [X]
+- Closed: [X] | Revenue: $[X]
+
+LEADERSHIP COACHES
+- Inquiries: [X]
+- Calls booked: [X]
+- Proposals: [X]
+- Closed: [X] | Revenue: $[X]
+
+LIFE COACHES
+- Inquiries: [X]
+- Calls booked: [X]
+- Proposals: [X]
+- Closed: [X] | Revenue: $[X]
+```
+
+---
+
+## ANOMALY ALERTS
+
+Flag immediately when:
+- API costs spike 3x daily average
+- Zero DMs for 2 consecutive days
+- Content engagement drops 50% from weekly average
+- Competitor launches coaching-specific offer
+- Revenue 20% behind weekly projection
+- One post gets 10x normal engagement (capitalize)
+- Specific pain point gets 3x normal engagement (double down)
+- GitHub backup fails
+- Scout finds 0 prospects 2 days in a row
+
+---
+
+## THRESHOLDS & TARGETS
+
+### Weekly Targets
+- 21 posts minimum (3/day)
+- 7 videos minimum (1/day)
+- 2-3 popcorn moments
+- 3+ qualified coaching inquiries
+- 1+ discovery call booked
+
+### Pain Point Coverage
+Ensure every pain point gets tested in content:
+- Session admin: tested [Y/N]
+- Follow-ups: tested [Y/N]
+- Acquisition: tested [Y/N]
+- Content: tested [Y/N]
+- Pipeline: tested [Y/N]
+- Proposals: tested [Y/N]
+- VA: tested [Y/N]
+- Burnout: tested [Y/N]
+
+### $10K Target Math
+- Day 7: Must be at $2,500 (25%)
+- Day 14: Must be at $5,000 (50%)
+- Day 21: Must be at $7,500 (75%)
+- Day 30: $10,000 (100%)
+
+If behind at any checkpoint: escalate intensity (post more, DM more, run paid if approved)
+
+---
+
+## TRIGGERS
+
+| Command | Action |
+|---------|--------|
+| "run Pulse" | Generate current report |
+| "how are we doing?" | Quick status check |
+| "what are the numbers?" | Full metrics dump |
+| "should we spend on [thing]?" | ROI analysis |
+| 11pm daily cron | Auto-generate daily report |
+| Sunday 8pm cron | Auto-generate weekly review |
+
+---
+
+## SAVE LOCATION
+
+- Daily reports: `memory/pulse/YYYY-MM-DD_pulse_log.md`
+- Weekly reviews: `memory/pulse/weekly/YYYY-MM-DD_weekly_review.md`
