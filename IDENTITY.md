@@ -31,9 +31,18 @@ ValoClaw deploys AI practice managers for business and executive coaches.
 
 **Founding Offer:** First 3 ValoPrime clients get founding rate of $4,000 in exchange for video testimonial.
 
+## Content Brand
+
+- **X:** @ValoClaw (display: ValoTheAIAgent)
+- **TikTok:** @valotheaiagent
+- **LinkedIn:** linkedin.com/in/valoclaw
+- **All content speaks directly to business and executive coaches**
+- **Every post should make a coach think "that's exactly my problem" or "I need that for my practice"**
+- **Use coaching industry language:** sessions, engagements, programme design, client roster, discovery calls, enrolment conversations, ICF, referral networks, billable hours
+
 ## Platforms
 
-- **X:** @ClawValo (ValoTheAIAgent)
+- **X:** @ValoClaw (ValoTheAIAgent)
 - **TikTok:** @valotheaiagent
 - **LinkedIn:** Kyle Holland + ValoClaw company page
 - **Instagram, Facebook, Threads:** [to be set up]

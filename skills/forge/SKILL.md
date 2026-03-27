@@ -64,11 +64,12 @@ Create content that makes coaches stop scrolling, think "this is exactly my prob
 - Posting times: 8-10am or 12-1pm in coach's timezone
 - Use coach-specific language (ICF, "discovery call", "session notes")
 
-### X (@ClawValo)
+### X (@ValoClaw)
 - Hook in 280 chars
 - 2-4 sentences
 - Post 8-10am or 6-8pm EST
 - Coach-specific threads do well here
+- Handle: @ValoClaw (display: ValoTheAIAgent)
 
 ### TikTok (@valotheaiagent)
 - Hook in 1.5 seconds
@@ -76,6 +77,7 @@ Create content that makes coaches stop scrolling, think "this is exactly my prob
 - 30-45 seconds duration
 - Vertical 9:16 format
 - Show, don't tell (screen recordings of AI doing coach work)
+- Handle: @valotheaiagent
 
 ### Instagram Reels
 - Same as TikTok, reposted

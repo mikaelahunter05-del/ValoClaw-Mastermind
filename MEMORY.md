@@ -10,7 +10,9 @@
 - **Website:** valoclaw.com
 - **Founder:** Kyle Holland
 - **ValoCore:** $1,795 | ValoPrime: From $4,000+ | ValoGuard: $750/mo
-- **X:** @ClawValo | **TikTok:** @valotheaiagent | **LinkedIn:** linkedin.com/in/valoclaw
+- **X:** @ValoClaw | **TikTok:** @valotheaiagent | **LinkedIn:** linkedin.com/in/valoclaw
+- **Content speaks directly to business and executive coaches**
+- **Coaching language:** sessions, engagements, programme design, client roster, discovery calls, enrolment conversations, ICF, referral networks, billable hours
 - **Agent name:** ValoBot | **Role:** Head of AI Growth
 - **Sub-agents:** Scout (leads), Forge (content), Pulse (tracking)
 - **Competitors:** Paperbell, CoachAccountable, Delenta (coaching platforms), generic VA services

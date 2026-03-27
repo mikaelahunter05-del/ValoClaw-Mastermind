@@ -126,9 +126,18 @@ ValoClaw deploys AI practice managers for business and executive coaches.
 - No one in the OpenClaw space is targeting coaches specifically — this is our blue ocean
 - AI coaching tools exist but they try to REPLACE the coach; we SUPPORT the coach
 
+## CONTEXT — CONTENT BRAND
+
+- **X:** @ValoClaw (display: ValoTheAIAgent)
+- **TikTok:** @valotheaiagent
+- **LinkedIn:** linkedin.com/in/valoclaw
+- **All content speaks directly to business and executive coaches**
+- **Every post should make a coach think "that's exactly my problem" or "I need that for my practice"**
+- **Use coaching industry language:** sessions, engagements, programme design, client roster, discovery calls, enrolment conversations, ICF, referral networks, billable hours
+
 ## CONTEXT — OUR PLATFORMS
 
-- **X:** @ClawValo (display name: ValoTheAIAgent)
+- **X:** @ValoClaw (display name: ValoTheAIAgent)
 - **TikTok:** @valotheaiagent
 - **LinkedIn:** linkedin.com/in/valoclaw (Kyle Holland's personal profile)
 - **LinkedIn company page:** ValoClaw
