@@ -17,7 +17,35 @@ This file defines automated tasks that run on schedule via cron jobs.
 1. Check Google Calendar for today's meetings
 2. Scan Gmail for urgent emails from VIP contacts (Michelle Hilling, Kenji Watabe)
 3. Search web for top 3 AI/coaching industry news stories (past 24h)
-4. Send formatted brief to Telegram with schedule, priority emails, news, and focus suggestions
+4. Pull today's content plan from weekly calendar (what to post and film today)
+5. Search LinkedIn for coaching-related conversations trending today
+6. Remind which coaching pain point to focus on today (from weekly rotation)
+7. Send formatted brief to Telegram with schedule, priority emails, news, content plan, trending topics, and focus suggestions
+
+OUTPUT FORMAT:
+☀️ MORNING BRIEF — [Day, Date]
+
+📅 TODAY'S SCHEDULE:
+[Meetings or "No meetings — content creation day"]
+
+📧 PRIORITY EMAILS:
+[Any from VIPs or "No priority emails"]
+
+📰 AI/COACHING NEWS:
+1. [Headline + one-line summary]
+2. [Headline + one-line summary]
+3. [Headline + one-line summary]
+
+📝 TODAY'S CONTENT PLAN:
+Post: [What to post today — platform, topic, hook]
+Film: [What video to film today — task, popcorn moment Y/N]
+Pain point focus: [Which of the 8 pains to emphasize]
+
+🔥 LINKEDIN TRENDING:
+[Coaching-related conversations gaining traction today]
+
+🎯 FOCUS TODAY:
+[Recommended priority based on schedule and experiment status]
 
 ---
 
