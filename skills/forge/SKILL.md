@@ -140,6 +140,14 @@ Teach coaches something useful about AI without pitching.
 ### 10. POPCORN HOOK
 "My AI is doing my admin. I'm eating popcorn. Day [X] of the experiment."
 
+**POPCORN GIMMICK RULES:**
+- Use when ValoBot is working autonomously (session prep, content drafting, follow-up sequences running)
+- Kyle leans back, eats popcorn, watches the AI work
+- Text overlay: "My AI is prepping my coaching sessions. I'm eating popcorn."
+- Don't overuse — 2-3 times per week max
+- The contrast between "AI doing serious work" and "human eating popcorn" is the hook
+- Shows the EASE that coaches are craving
+
 ---
 
 ## VIDEO SCRIPT FORMULA
@@ -158,6 +166,14 @@ Teach coaches something useful about AI without pitching.
 
 ---
 
+## HASHTAGS FOR EVERY POST
+
+#businesscoach #executivecoaching #coachingbusiness #highticketcoach #coachingautomation #leadershipcoaching #coachingsales #onlinecoach #coachingtools #aiforbusiness
+
+Use all 10 hashtags on every post where platform allows.
+
+---
+
 ## CONTENT CALENDAR TEMPLATE
 
 ### Monday: Pain Mirror (LinkedIn primary)
@@ -165,6 +181,7 @@ Call out a specific coaching pain. Make them feel seen.
 
 ### Tuesday: Demo Proof (TikTok primary)
 Screen recording of AI handling session admin, follow-ups, or content.
+- Include 1 popcorn moment this week
 
 ### Wednesday: Transformation Story (LinkedIn long-form)
 Before/after narrative or experiment update.
@@ -174,6 +191,7 @@ Teach something valuable about AI or systems.
 
 ### Friday: Demo Proof (TikTok primary)
 Another screen recording, different task.
+- Include 1 popcorn moment this week
 
 ### Saturday: Pain Mirror (X or LinkedIn)
 Shorter format, weekend attention.
@@ -209,48 +227,85 @@ Notes:
 [Film prompts, timing, or special instructions]
 ```
 
-### Weekly Content Plan
+### Weekly Content Plan (Every Monday)
 
 ```
 ✍️ WEEKLY CONTENT PLAN — Week [X]
 
 THEME: [Weekly focus pain point]
 
-MONDAY (Pain Mirror — LinkedIn):
-Topic: [Subject]
-Hook: [Hook formula used]
-Draft: [Content]
+=== VIDEO CONCEPTS (7 total) ===
 
-TUESDAY (Demo Proof — TikTok):
-Topic: [AI task being shown]
-Hook: [Visual text]
-Film prompt: [Setup for Kyle]
+TUESDAY VIDEO — [AI Task Name]
+Hook (0-2s text): [Visual text]
+Setup (2-5s Kyle): [What Kyle says]
+Demo (5-30s screen): [What AI is doing]
+Popcorn moment: [Yes/No — if yes, describe]
+Payoff (30-40s Kyle): [Result/impact]
+CTA (40-45s): [Follow for Day X / DM VALO]
+Platform: TikTok + Instagram Reels
 
-WEDNESDAY (Transformation — LinkedIn):
-Topic: [Story angle]
-Hook: [Opening line]
-Draft: [Content]
+FRIDAY VIDEO — [AI Task Name]
+[Same format as Tuesday]
 
-THURSDAY (Education — LinkedIn/X):
-Topic: [Lesson]
+[SATURDAY VIDEO if needed — short form]
+
+=== PLATFORM-SPECIFIC CONTENT ===
+
+MONDAY — LinkedIn (Pain Mirror):
+Hook: [First line]
+Body: [Full post 800-1200 chars]
+CTA: [Call to action]
+Hashtags: [All 10]
+
+WEDNESDAY — LinkedIn (Transformation Story):
 Hook: [Opening]
-Draft: [Content]
+Body: [Long-form narrative]
+CTA: [Soft ask]
+Hashtags: [All 10]
 
-FRIDAY (Demo Proof — TikTok):
-Topic: [Different AI task]
-Hook: [Visual text]
-Film prompt: [Setup]
+THURSDAY — LinkedIn/X (Education):
+LinkedIn version:
+- Hook: [Opening]
+- Body: [Educational content]
+- CTA: [Engagement question]
 
-SATURDAY (Pain Mirror — X):
-Topic: [Quick hit pain point]
-Draft: [Short form]
+X version:
+- Thread opener: [Hook]
+- Tweet 2-5: [Key points]
+- Final tweet: [CTA]
 
-SUNDAY (Soft Sell — LinkedIn):
-Topic: [Specific offer]
-Draft: [Sales post]
+SATURDAY — X (Pain Mirror):
+Draft: [Short, punchy 280 chars]
 
-RATIO CHECK:
-Pain Mirror: [X]/7 | Demo Proof: [X]/7 | Transformation: [X]/7 | Education: [X]/7 | Soft Sell: [X]/7
+SUNDAY — LinkedIn (Soft Sell):
+Hook: [Direct offer]
+Body: [What includes, pricing, founding offer]
+CTA: [DM VALO / Link in bio]
+Hashtags: [All 10]
+
+=== CONTENT MIX CHECK ===
+Target: Pain Mirror 35% | Demo Proof 30% | Transformation 20% | Education 10% | Soft Sell 5%
+
+This week:
+Pain Mirror: [X]/7 ([X]%)
+Demo Proof: [X]/7 ([X]%)
+Transformation: [X]/7 ([X]%)
+Education: [X]/7 ([X]%)
+Soft Sell: [X]/7 ([X]%)
+
+Status: 🟢 On target / 🟡 Needs adjustment / 🔴 Off ratio
+
+=== POPCORN MOMENTS (2-3 per week) ===
+1. [Day + Video]: [Description of popcorn moment]
+2. [Day + Video]: [Description of popcorn moment]
+3. [Day + Video]: [Description if applicable]
+
+=== HASHTAG BLOCK ===
+#businesscoach #executivecoaching #coachingbusiness #highticketcoach #coachingautomation #leadershipcoaching #coachingsales #onlinecoach #coachingtools #aiforbusiness
+
+=== NOTES FOR KYLE ===
+[Filming schedule, batching suggestions, specific coaching pain to emphasize this week]
 ```
 
 ---
